@@ -1,0 +1,28 @@
+// 中央配置
+@mixin center() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+// 横並び配置
+@mixin row() {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+// 詳しくみるボタン
+@mixin button() {
+    text-decoration: none;
+    color: $main-color;
+    font-size: smaller;
+    border: 2px solid $main-color;
+    padding: 10px 100px;
+    font-family: 'メイリオ';
+    font-weight: normal;
+    font-size: 15px;
+}

@@ -1,0 +1,627 @@
+@import "_settings";
+@import "_mixins";
+
+// ------------------------
+// 全体構造
+// ------------------------
+
+body {
+    background-color: $base-color;
+    background-image: url(../images/background-image.png);
+    background-position: center;
+    background-repeat: repeat-x repeat-y;
+    color: #000000;
+    font-family: 'Shippori Mincho B1', "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-size: $normal;
+}
+
+.page {
+    margin: 0 auto;
+}
+
+
+// ------------------------
+// bxslider
+// ------------------------
+.bx-wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    *zoom: 1;
+}
+
+
+
+// ------------------------
+// hover
+// ------------------------
+
+nav {
+    a {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    a::after {
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: $base-color;
+        transform: scale(0, 1);
+        transform-origin: left top;
+        transition: transform .3s;
+    }
+
+    a:hover::after {
+        transform: scale(1, 1);
+    }
+
+    .icon a::after {
+        transform: scale(0, 1) !important;
+
+    }
+
+}
+
+
+
+#bake {
+    img {
+        transition: 1.0s;
+    }
+
+    img:hover {
+        opacity: 0.7;
+    }
+}
+
+#cake {
+
+    img {
+        transition: 1.0s;
+    }
+
+    img:hover {
+        opacity: 0.7;
+    }
+}
+
+#oshirase {
+    img {
+        transition: 1.0s;
+    }
+
+    img:hover {
+        opacity: 0.7;
+    }
+}
+
+.googlemap {
+    a:hover {
+        text-decoration: none;
+    }
+}
+
+
+
+// ------------------------
+// ヘッダー
+// ------------------------
+
+header {
+    width: auto;
+    text-align: center;
+
+    .logo {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    h1 {
+        position: absolute;
+        top: 450px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: $base-color;
+        font-size: 50px;
+        letter-spacing: 10px;
+    }
+
+    .sub {
+        position: absolute;
+        top: 530px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: $base-color;
+        font-size: 15px;
+        font-weight: bold;
+        letter-spacing: 5px;
+    }
+
+    ul {
+        @include row();
+        justify-content: center;
+        position: absolute;
+        top: 650px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        a {
+            text-decoration: none;
+            color: $base-color;
+            font-family: 'メイリオ';
+            margin-right: 45px;
+        }
+    }
+
+    p {
+        color: $base-color;
+        font-size: 15px;
+        position: absolute;
+        top: 850px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        font-family: 'メイリオ';
+    }
+
+    .icon a {
+        @include row();
+        margin-right: 15px;
+    }
+}
+
+
+
+
+// ------------------------
+// メイン
+// ------------------------
+
+main {
+    width: 100%;
+    margin: auto;
+
+    .order {
+        margin: auto;
+    }
+
+    #bake {
+        float: left;
+        overflow: hidden;
+        width: 50%;
+
+        img {
+            width: 100%;
+            height: 574px;
+            object-fit: cover;
+        }
+    }
+
+
+    #cake {
+        float: right;
+        overflow: hidden;
+        width: 50%;
+
+        img {
+            width: 100%;
+            height: 574px;
+            object-fit: cover;
+        }
+
+
+    }
+
+    #what {
+        width: 1160px;
+        background-image: url(../images/main-background-image.png);
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 1160px;
+        height: 980px;
+        margin: auto;
+
+
+        h2 {
+            margin-left: 150px;
+            float: left;
+            padding-top: 100px;
+        }
+
+        .what-info {
+            float: left;
+            text-align: left;
+            padding-top: 100px;
+            font-family: 'メイリオ';
+            margin-left: 50px;
+        }
+
+        p {
+            line-height: 2.0;
+            margin-bottom: 20px;
+        }
+
+        .click-bigger a {
+            text-decoration: none;
+            background-color: $main-color;
+            color: $base-color;
+            font-size: 15px;
+            padding: 10px 100px;
+            display: block;
+            width: 300px;
+            text-align: center;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            border: 2px solid $main-color;
+        }
+
+    }
+
+
+
+    #news {
+        background-color: $base-color;
+        background-image: url(../images/dot.png);
+        background-repeat: repeat-x repeat-y;
+        position: relative;
+        background-size: auto;
+
+        h3 {
+            text-align: center;
+            padding-top: 80px;
+            margin-bottom: 20px;
+        }
+    }
+
+    #oshirase {
+        height: 530px;
+        @include center();
+        justify-content: flex-start;
+        align-items: center;
+
+        .click-bigger a {
+            @include button();
+            color: $base-color;
+            background-color: $main-color;
+            margin-top: 20px;
+            margin-bottom: 80px;
+            -webkit-transition: all 0.3s ease;
+            -moz-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+    }
+
+    #notice {
+        padding: 1.0% 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        li {
+            width: 270px;
+        }
+
+        a {
+            border-bottom: 1px dotted #000000;
+            text-decoration: none;
+            color: #000000;
+        }
+
+    }
+
+    #line1 {
+        padding: 1.0% 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        a {
+            width: 250px;
+            height: 70px;
+            margin-right: 30px;
+        }
+
+    }
+
+    #line2 {
+        padding: 1.0% 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        a {
+            width: 250px;
+            height: 70px;
+            margin-right: 30px;
+        }
+
+    }
+
+    #line3 {
+        padding: 1.0% 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+
+        a {
+            width: 250px;
+            height: 70px;
+            margin-right: 30px;
+        }
+    }
+
+
+    ul {
+        list-style-type: none;
+    }
+
+    .flex>* {
+        min-width: 8%;
+        flex-basis: 25%;
+        background: #fff;
+        font-size: 64px;
+        text-align: center;
+    }
+
+
+}
+
+
+
+// ------------------------
+// フッター
+// ------------------------
+
+footer {
+    background-image: url(../images/footer.image1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    height: auto;
+    @include center();
+    justify-content: flex-start;
+    width: auto;
+    background-size: cover;
+
+
+    .logo {
+        text-align: center;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .address {
+        width: 450px;
+        border-top: 1px solid $base-color;
+        border-bottom: 1px solid $base-color;
+    }
+
+    address {
+        font-size: 15px;
+        font-family: 'メイリオ';
+        color: $base-color;
+        font-style: normal;
+        line-height: 2.0;
+        margin-bottom: 30px;
+
+        h6 {
+            font-size: $normal;
+            margin-top: 30px;
+        }
+    }
+
+    ul {
+        @include row();
+        justify-content: center;
+
+
+        li {
+            list-style-type: none;
+            margin-left: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+
+    p {
+        text-align: center;
+        font-size: 15px;
+        color: $base-color;
+        font-family: 'メイリオ';
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
+
+
+
+
+
+// ------------------------
+// ABOUT
+// ------------------------
+
+#about {
+    header {
+        height: 500px;
+        background-image: url(../images/header2page.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        .logo img {
+            width: 300px;
+            padding-top: 50px;
+        }
+
+        ul {
+            top: 350px;
+        }
+
+    }
+
+    main {
+        margin: auto;
+
+        .about-pouta {
+            padding-top: 80px;
+            height: 850px;
+            background-color: $base-color;
+            position: relative;
+            margin-right: auto;
+            margin-left: auto;
+
+            h3 {
+                margin-bottom: 50px;
+                text-align: center;
+            }
+
+            .pastry {
+                border-radius: 15px;
+                position: absolute;
+                right: 400px;
+            }
+
+            .reason {
+                position: absolute;
+                left: 400px;
+            }
+
+
+            p {
+                width: 700px;
+                line-height: 2.3;
+                float: left;
+                font-family: 'メイリオ';
+                padding-left: 50px;
+                text-align: justify;
+            }
+
+        }
+
+
+        .menu {
+            text-align: center;
+            background-image: url(../images/background2.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 1360px;
+            height: 800px;
+            margin-bottom: 30px;
+
+            h4 {
+                padding-top: 80px;
+                margin-bottom: 50px;
+            }
+
+            ul {
+                padding: 1.0% 0;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            li {
+                margin: 50px
+            }
+
+            .desert {
+                @include center();
+            }
+        }
+
+        .information {
+            background-image: url(../images/dot.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 830px;
+            background-color: $base-color;
+
+            h4 {
+                padding-top: 60px;
+                text-align: center;
+                margin-bottom: 60px;
+            }
+
+            .tableMap {
+                width: 1000px;
+                margin: auto;
+            }
+
+            table {
+                font-family: 'メイリオ';
+                font-size: 15px;
+                float: left;
+                letter-spacing: 2px;
+
+                th {
+                    padding: 40px 50px 40px 10px;
+                }
+
+                td {
+                    padding-right: 50px;
+
+                    p {
+                        line-height: 1.5;
+                    }
+                }
+
+                .plus {
+                    padding-bottom: 30px;
+                }
+            }
+
+            tr:nth-child(odd) {
+                background-color: #ffecde;
+            }
+
+            .map {
+                float: right;
+
+                .googlemap {
+                    margin-top: 10px;
+                    text-align: right;
+
+                    a {
+                        color: #000000;
+                        font-family: 'メイリオ';
+                    }
+                }
+
+                i {
+                    color: $main-color;
+                }
+
+            }
+
+        }
+
+    }
+
+    footer {
+        background-image: url(../images/footer.image2.jpg);
+    }
+
+}
