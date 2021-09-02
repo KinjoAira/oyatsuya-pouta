@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200" height="255" viewBox="0 0 200 255">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_48" data-name="長方形 48" width="200" height="200" transform="translate(-342 -1101)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="pouta" transform="translate(313 1094)">
+    <g id="マスクグループ_8" data-name="マスクグループ 8" transform="translate(29 7)" clip-path="url(#clip-path)">
+      <path id="cookie-bite-solid" d="M199.418,99.928a49.97,49.97,0,0,1-49.4-49.944A49.968,49.968,0,0,1,100.072.59,51.548,51.548,0,0,0,68.932,5.6l-27,13.758A51.648,51.648,0,0,0,19.355,41.937L5.644,68.842a51.813,51.813,0,0,0-5.008,31.62l4.719,29.792a51.765,51.765,0,0,0,14.515,28.5l21.394,21.39a51.576,51.576,0,0,0,28.4,14.476l29.964,4.746a51.528,51.528,0,0,0,31.456-4.984l27-13.754a51.668,51.668,0,0,0,22.574-22.582l13.711-26.906a51.79,51.79,0,0,0,5.043-31.214ZM68.749,143.747a12.5,12.5,0,1,1,12.5-12.5A12.5,12.5,0,0,1,68.749,143.747Zm12.5-62.5a12.5,12.5,0,1,1,12.5-12.5A12.5,12.5,0,0,1,81.248,81.248Zm62.5,50a12.5,12.5,0,1,1,12.5-12.5A12.5,12.5,0,0,1,143.747,131.247Z" transform="translate(-341.998 -1101.002)" fill="#fff"/>
+    </g>
+    <text id="POUTA-2" data-name="POUTA" transform="translate(-302 -848)" fill="#fff" font-size="40" font-family="Alice-Regular, Alice" letter-spacing="0.3em"><tspan x="0" y="0">POUTA</tspan></text>
+  </g>
+</svg>
